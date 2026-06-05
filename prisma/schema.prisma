@@ -24,6 +24,7 @@ model Product {
   stock           Int
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt
+  orderItems      OrderItem[]
 }
 
 model Order {
@@ -33,4 +34,16 @@ model Order {
   userId          String?  @db.ObjectId
   totalAmount     Float
   createdAt       DateTime @default(now())
+  items           OrderItem[]
+}
+
+model OrderItem {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  order     Order   @relation(fields: [orderId], references: [id])
+  orderId   String  @db.ObjectId
+  product   Product @relation(fields: [productId], references: [id])
+  productId String  @db.ObjectId
+  name      String
+  unitPrice Float
+  quantity  Int
 }

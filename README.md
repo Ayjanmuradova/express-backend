@@ -99,7 +99,9 @@ This folder structure provides a clear organization for the project's source cod
 
 - **TypeScript Support:** Write your Express application using TypeScript for enhanced type safety and developer productivity.
 - **Express.js Integration:** Utilize the powerful features of Express.js to build robust and scalable web applications.
-- **Mongoose Integration:** Seamlessly connect your Express application to MongoDB databases using Mongoose for data modeling and interaction.
+- **Prisma ORM:** Seamless database interactions and migrations using Prisma ORM.
+- **Stripe Payments:** Secure checkout and webhook processing via Stripe integration.
+- **Resend Emails:** Automated transaction and order confirmation emails using Resend.
 - **Pino Logging:** Benefit from fast and efficient logging with Pino, a low-overhead Node.js logger.
 - **Jest Testing:** Write and run tests for your application using Jest, a delightful JavaScript testing framework.
 - **Nodemon Development:** Use Nodemon for automatic server restarts during development for a smooth development experience.
